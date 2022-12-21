@@ -12,7 +12,7 @@ public class HomeController {
     * http://localhost:8081/springboot/home.html */
     @RequestMapping(value = {"", "/","/home"})
     public String displayHomePage(Model model) {
-        model.addAttribute("username", "John Doe");
+        model.addAttribute("username", "John Smith");
         return "home.html";
     }
 
