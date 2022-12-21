@@ -8,3 +8,4 @@
 |[spring-mapping-multiple-paths](https://github.com/sahug/spring-boot/tree/spring-mapping-multiple-paths)||
 |[update-port-and-path](https://github.com/sahug/spring-boot/tree/update-port-and-path)||
 |[spring-boot-dev-tools](https://github.com/sahug/spring-boot/tree/spring-boot-dev-tools)||
+|[simple-spring-boot-application](https://github.com/sahug/spring-boot/tree/simple-spring-boot-application)||
