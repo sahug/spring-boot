@@ -10,3 +10,4 @@
 |[spring-boot-dev-tools](https://github.com/sahug/spring-boot/tree/spring-boot-dev-tools)||
 |[simple-spring-boot-application](https://github.com/sahug/spring-boot/tree/simple-spring-boot-application)||
 |[configure-courses-link-w-webmvcconfigurer](https://github.com/sahug/spring-boot/tree/configure-courses-link-w-webmvcconfigurer)||
+|[configure-about-n-contact-page](https://github.com/sahug/spring-boot/tree/configure-about-n-contact-page)||
