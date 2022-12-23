@@ -1,5 +1,15 @@
 package org.example.springboot.model;
 
+
+import lombok.Data;
+
+/*
+@Data annotation is provided by Lombok library which generates getter, setter,
+equals(), hashCode(), toString() methods & Constructor at compile time.
+This makes our code short and clean.
+* */
+
+@Data
 public class Contact {
 
     private String name;
@@ -8,6 +18,7 @@ public class Contact {
     private String subject;
     private String message;
 
+    /*
     public String getName() {
         return name;
     }
@@ -47,5 +58,5 @@ public class Contact {
     public void setMessage(String message) {
         this.message = message;
     }
-
+    */
 }

@@ -1,5 +1,8 @@
 package org.example.springboot.model;
 
+import lombok.Data;
+
+@Data
 public class Holiday {
 
     private final String day;
@@ -10,6 +13,7 @@ public class Holiday {
         FESTIVAL, FEDERAL
     }
 
+    /*
     public Holiday(String day, String reason, Type type){
         this.day = day;
         this.reason = reason;
@@ -27,4 +31,5 @@ public class Holiday {
     public Type getType() {
         return type;
     }
+    */
 }

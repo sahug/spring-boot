@@ -1,5 +1,6 @@
 package org.example.springboot.controller;
 
+import lombok.extern.slf4j.Slf4j;
 import org.example.springboot.model.Contact;
 import org.example.springboot.service.ContactService;
 import org.slf4j.Logger;
@@ -13,10 +14,11 @@ import org.springframework.web.servlet.ModelAndView;
 
 import static org.springframework.web.bind.annotation.RequestMethod.POST;
 
+@Slf4j
 @Controller
 public class ContactController {
 
-    private static Logger log = LoggerFactory.getLogger(ContactController.class);
+    /*private static Logger log = LoggerFactory.getLogger(ContactController.class);*/
 
     private final ContactService contactService;
 
@@ -46,6 +48,7 @@ public class ContactController {
     @RequestMapping(value = "/saveMsg", method = POST)
     public ModelAndView saveMessage(Contact contact){
         contactService.saveMessageDetails(contact);
+        log.info("Redirection to Contact Page");
         return new ModelAndView("redirect:/contact");
     }
     
