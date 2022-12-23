@@ -13,3 +13,4 @@
 |[configure-about-n-contact-page](https://github.com/sahug/spring-boot/tree/configure-about-n-contact-page)||
 |[using-requestparam-to-submit-information](https://github.com/sahug/spring-boot/tree/using-requestparam-to-submit-information)||
 |[using-pojo-to-submit-information](https://github.com/sahug/spring-boot/tree/using-pojo-to-submit-information)||
+|[configure-holiday-page](https://github.com/sahug/spring-boot/tree/configure-holiday-page)||
