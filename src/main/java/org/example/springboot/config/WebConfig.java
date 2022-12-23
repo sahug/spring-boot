@@ -11,8 +11,8 @@ public class WebConfig implements WebMvcConfigurer {
     public void addViewControllers(ViewControllerRegistry viewControllerRegistry) {
         /* Refers to the template with name courses */
         viewControllerRegistry.addViewController(("/courses")).setViewName("courses");
+        /* Refers to the template with name about */
+        viewControllerRegistry.addViewController(("/about")).setViewName("about");
     }
-
-
 
 }
