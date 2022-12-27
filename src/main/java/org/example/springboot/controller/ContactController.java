@@ -67,6 +67,9 @@ public class ContactController {
     }
     */
 
+    /* We can put @Valid annotation on method parameters to tell Spring framework that we want a particular POJO object
+    * needs to be validated based on the validation annotation configurations. For any issues, framework populates the
+    * error details inside the Error object. The errors can be used to display on the UI to the user.*/
     @RequestMapping(value = "/saveMsg", method = POST)
     public String saveMessage(@Valid @ModelAttribute("contact") Contact contact, Errors errors){
         if(errors.hasErrors()) {
