@@ -15,3 +15,4 @@
 |[using-pojo-to-submit-information](https://github.com/sahug/spring-boot/tree/using-pojo-to-submit-information)||
 |[configure-holiday-page](https://github.com/sahug/spring-boot/tree/configure-holiday-page)||
 |[using-lombok-annotations](https://github.com/sahug/spring-boot/tree/using-lombok-annotations)||
+|[query-parameters-using-request-parameters](https://github.com/sahug/spring-boot/tree/query-parameters-using-request-parameters)||
