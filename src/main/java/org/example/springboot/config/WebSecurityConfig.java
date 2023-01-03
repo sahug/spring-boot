@@ -43,22 +43,43 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
      * @return SecurityFilterChain
      * @throws Exception
      */
+    /*
     @Bean
     SecurityFilterChain defaultSecurityFilterChain(HttpSecurity httpSecurity) throws Exception {
-        /** Permit All Requests inside the Web Application */
-        /*
+        *//** Permit All Requests inside the Web Application *//*
+        *//*
         httpSecurity.authorizeRequests().anyRequest().permitAll()
                         .and().formLogin()
                         .and().httpBasic();
-        */
+        *//*
 
-        /** Deny All Requests inside the Web Application */
-        /*
+        *//** Deny All Requests inside the Web Application *//*
+        *//*
         httpSecurity.authorizeRequests().anyRequest().denyAll()
                 .and().formLogin()
                 .and().httpBasic();
-        */
+        *//*
         return httpSecurity.build();
-
     }
+    */
+
+    /**
+     * We can apply custom security config based on our requirements for each API/URL.
+     * permitAll() can be used to allow access w/o security and
+     * authenticated() can be used to protect wep page/API.
+     */
+    @Override
+    protected void configure(HttpSecurity httpSecurity) throws Exception {
+        httpSecurity.csrf().disable()
+                .authorizeRequests()
+                .mvcMatchers("/dashboard").authenticated()
+                .mvcMatchers("/home").permitAll()
+                .mvcMatchers("/holidays/**").permitAll()
+                .mvcMatchers("/contact").permitAll()
+                .mvcMatchers("/saveMsg").permitAll()
+                .mvcMatchers("/courses").permitAll()
+                .mvcMatchers("/about").permitAll()
+                .and().formLogin().and().httpBasic();
+    }
+
 }
