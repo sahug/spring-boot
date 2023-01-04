@@ -18,3 +18,6 @@
 |[query-parameters-using-request-parameters](https://github.com/sahug/spring-boot/tree/query-parameters-using-request-parameters)||
 |[path-params-using-path-variable](https://github.com/sahug/spring-boot/tree/path-params-using-path-variable)||
 |[spring-bean-validation](https://github.com/sahug/spring-boot/tree/spring-bean-validation)||
+|[permitAll-and-denyAll-using-spring-security](https://github.com/sahug/spring-boot/tree/permitAll-and-denyAll-using-spring-security)||
+|[spring-bean-web-scopes](https://github.com/sahug/spring-boot/tree/spring-bean-web-scopes)||
+|[custom-security-configurations](https://github.com/sahug/spring-boot/tree/custom-security-configurations)||
