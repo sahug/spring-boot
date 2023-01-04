@@ -1,11 +1,15 @@
 package org.example.springboot.config;
 
 import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
 import org.springframework.security.web.SecurityFilterChain;
 
-public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
+@Configuration
+/* WebSecurityConfigurerAdapter is not required for SecurityFilterChain */
+//public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
+public class WebSecurityConfig {
 
     /**
      * permitAll() allows full/public access to a specific or all resource/path inside a web application.
@@ -42,26 +46,24 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
      * @param httpSecurity
      * @return SecurityFilterChain
      * @throws Exception
+     * URL: http://localhost:8081/springboot/login
      */
-    /*
+
     @Bean
     SecurityFilterChain defaultSecurityFilterChain(HttpSecurity httpSecurity) throws Exception {
-        *//** Permit All Requests inside the Web Application *//*
-        *//*
+        /** Permit All Requests inside the Web Application */
         httpSecurity.authorizeRequests().anyRequest().permitAll()
                         .and().formLogin()
                         .and().httpBasic();
-        *//*
 
-        *//** Deny All Requests inside the Web Application *//*
-        *//*
+        //** Deny All Requests inside the Web Application *//*
+        /*
         httpSecurity.authorizeRequests().anyRequest().denyAll()
                 .and().formLogin()
                 .and().httpBasic();
-        *//*
+        */
         return httpSecurity.build();
     }
-    */
 
     /**
      * We can apply custom security config based on our requirements for each API/URL.
@@ -83,4 +85,5 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
             .mvcMatchers("/about").permitAll()
             .and().formLogin().and().httpBasic();
     }
+
 }
