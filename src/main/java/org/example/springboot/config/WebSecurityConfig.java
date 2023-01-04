@@ -8,8 +8,7 @@ import org.springframework.security.web.SecurityFilterChain;
 
 @Configuration
 /* WebSecurityConfigurerAdapter is not required for SecurityFilterChain */
-//public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
-public class WebSecurityConfig {
+public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 
     /**
      * permitAll() allows full/public access to a specific or all resource/path inside a web application.
@@ -49,21 +48,23 @@ public class WebSecurityConfig {
      * URL: http://localhost:8081/springboot/login
      */
 
+    /*
     @Bean
     SecurityFilterChain defaultSecurityFilterChain(HttpSecurity httpSecurity) throws Exception {
-        /** Permit All Requests inside the Web Application */
+        *//** Permit All Requests inside the Web Application *//*
         httpSecurity.authorizeRequests().anyRequest().permitAll()
                         .and().formLogin()
                         .and().httpBasic();
 
-        //** Deny All Requests inside the Web Application *//*
-        /*
+        *//** Deny All Requests inside the Web Application *//*
+        *//*
         httpSecurity.authorizeRequests().anyRequest().denyAll()
                 .and().formLogin()
                 .and().httpBasic();
-        */
+        *//*
         return httpSecurity.build();
     }
+    */
 
     /**
      * We can apply custom security config based on our requirements for each API/URL.
