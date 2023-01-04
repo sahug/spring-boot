@@ -22,3 +22,4 @@
 |[spring-bean-web-scopes](https://github.com/sahug/spring-boot/tree/spring-bean-web-scopes)||
 |[custom-security-configurations](https://github.com/sahug/spring-boot/tree/custom-security-configurations)||
 |[spring-in-memory-authentication](https://github.com/sahug/spring-boot/tree/spring-in-memory-authentication)||
+|[login-and-logout-page-integration](https://github.com/sahug/spring-boot/tree/login-and-logout-page-integration)||
