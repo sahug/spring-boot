@@ -67,12 +67,12 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
      * We can apply custom security config based on our requirements for each API/URL.
      * permitAll() can be used to allow access w/o security and
      * authenticated() can be used to protect wep page/API.
+     * URL: http://localhost:8081/springboot/login
      */
     @Override
     protected void configure(HttpSecurity httpSecurity) throws Exception {
         httpSecurity.csrf().disable()
                 .authorizeRequests()
-                .mvcMatchers("/dashboard").authenticated()
                 .mvcMatchers("/home").permitAll()
                 .mvcMatchers("/holidays/**").permitAll()
                 .mvcMatchers("/contact").permitAll()
@@ -81,5 +81,4 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
                 .mvcMatchers("/about").permitAll()
                 .and().formLogin().and().httpBasic();
     }
-
 }
