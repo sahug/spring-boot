@@ -48,7 +48,7 @@ public class WebSecurityConfig {
      * @throws Exception
      * URL: http://localhost:8081/springboot/login
      */
-    /*
+
     @Bean
     SecurityFilterChain defaultSecurityFilterChain(HttpSecurity httpSecurity) throws Exception {
         /** Permit All Requests inside the Web Application */
@@ -56,32 +56,13 @@ public class WebSecurityConfig {
                         .and().formLogin()
                         .and().httpBasic();
 
-        *//** Deny All Requests inside the Web Application *//*
-        *//*
+        //** Deny All Requests inside the Web Application *//*
+        /*
         httpSecurity.authorizeRequests().anyRequest().denyAll()
                 .and().formLogin()
                 .and().httpBasic();
-        *//*
+        */
         return httpSecurity.build();
     }
-    */
 
-    /**
-     * We can apply custom security config based on our requirements for each API/URL.
-     * permitAll() can be used to allow access w/o security and
-     * authenticated() can be used to protect wep page/API.
-     * URL: http://localhost:8081/springboot/login
-     */
-    @Override
-    protected void configure(HttpSecurity httpSecurity) throws Exception {
-        httpSecurity.csrf().disable()
-                .authorizeRequests()
-                .mvcMatchers("/home").permitAll()
-                .mvcMatchers("/holidays/**").permitAll()
-                .mvcMatchers("/contact").permitAll()
-                .mvcMatchers("/saveMsg").permitAll()
-                .mvcMatchers("/courses").permitAll()
-                .mvcMatchers("/about").permitAll()
-                .and().formLogin().and().httpBasic();
-    }
 }
