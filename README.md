@@ -23,3 +23,4 @@
 |[custom-security-configurations](https://github.com/sahug/spring-boot/tree/custom-security-configurations)||
 |[spring-in-memory-authentication](https://github.com/sahug/spring-boot/tree/spring-in-memory-authentication)||
 |[login-and-logout-page-integration](https://github.com/sahug/spring-boot/tree/login-and-logout-page-integration)||
+|[thymeleaf-spring-security-integration](https://github.com/sahug/spring-boot/tree/thymeleaf-spring-security-integration)||
