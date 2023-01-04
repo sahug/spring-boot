@@ -2,8 +2,10 @@ package org.example.springboot.config;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
+import org.springframework.security.crypto.password.NoOpPasswordEncoder;
 import org.springframework.security.web.SecurityFilterChain;
 
 @Configuration
@@ -78,13 +80,22 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
     protected void configure(HttpSecurity httpSecurity) throws Exception {
         httpSecurity.csrf().disable()
             .authorizeRequests()
-            .mvcMatchers("/home").permitAll()
+            .mvcMatchers("/home").authenticated()
             .mvcMatchers("/holidays/**").permitAll()
             .mvcMatchers("/contact").permitAll()
             .mvcMatchers("/saveMsg").permitAll()
             .mvcMatchers("/courses").permitAll()
             .mvcMatchers("/about").permitAll()
             .and().formLogin().and().httpBasic();
+    }
+
+    @Override
+    protected void configure(AuthenticationManagerBuilder authenticationManagerBuilder) throws Exception {
+        authenticationManagerBuilder.inMemoryAuthentication()
+                .withUser("user").password("12345").roles("USER")
+                .and()
+                .withUser("admin").password("54321").roles("USER", "ADMIN")
+                .and().passwordEncoder(NoOpPasswordEncoder.getInstance());
     }
 
 }
