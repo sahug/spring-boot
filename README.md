@@ -21,3 +21,4 @@
 |[permitAll-and-denyAll-using-spring-security](https://github.com/sahug/spring-boot/tree/permitAll-and-denyAll-using-spring-security)||
 |[spring-bean-web-scopes](https://github.com/sahug/spring-boot/tree/spring-bean-web-scopes)||
 |[custom-security-configurations](https://github.com/sahug/spring-boot/tree/custom-security-configurations)||
+|[spring-in-memory-authentication](https://github.com/sahug/spring-boot/tree/spring-in-memory-authentication)||
